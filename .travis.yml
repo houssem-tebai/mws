@@ -1,0 +1,15 @@
+sudo: required
+services:
+        - docker
+deploy:
+        provider: elasticbeanstalk
+        region: "us-east-1"
+        app: "merihen-webservice"
+        env: "MerihenWebservice-env"
+        bucket_name: "elasticbeanstalk-us-east-1-518268222591"
+        bucket_path: "merihen-webservice"
+        on:
+                branch: master
+        access_key_id: "$ACCESS_KEY_ID"
+        secret_access_key:
+                secure: "$SECRET_ACCESS_KEY"
