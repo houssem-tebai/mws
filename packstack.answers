@@ -841,7 +841,7 @@ CONFIG_NEUTRON_ML2_VNI_RANGES=10:100
 
 # Name of the L2 agent to be used with OpenStack Networking.
 # ['linuxbridge', 'openvswitch', 'ovn']
-CONFIG_NEUTRON_L2_AGENT=ovn
+CONFIG_NEUTRON_L2_AGENT=openvswitch
 
 # Comma-separated list of interface mappings for the OpenStack
 # Networking ML2 SRIOV agent. Each tuple in the list must be in the
