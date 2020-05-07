@@ -779,7 +779,7 @@ CONFIG_NEUTRON_METADATA_PW=8101ccc576f0411c
 
 # Specify 'y' to install OpenStack Networking's Load-Balancing-
 # as-a-Service (LBaaS). ['y', 'n']
-CONFIG_LBAAS_INSTALL=n
+CONFIG_LBAAS_INSTALL=y
 
 # Specify 'y' to install OpenStack Networking's L3 Metering agent
 # ['y', 'n']
@@ -787,11 +787,11 @@ CONFIG_NEUTRON_METERING_AGENT_INSTALL=y
 
 # Specify 'y' to configure OpenStack Networking's Firewall-
 # as-a-Service (FWaaS). ['y', 'n']
-CONFIG_NEUTRON_FWAAS=n
+CONFIG_NEUTRON_FWAAS=y
 
 # Specify 'y' to configure OpenStack Networking's VPN-as-a-Service
 # (VPNaaS). ['y', 'n']
-CONFIG_NEUTRON_VPNAAS=n
+CONFIG_NEUTRON_VPNAAS=y
 
 # Comma-separated list of network-type driver entry points to be
 # loaded from the neutron.ml2.type_drivers namespace. ['local',
@@ -809,7 +809,7 @@ CONFIG_NEUTRON_ML2_TENANT_NETWORK_TYPES=geneve
 # namespace. ['logger', 'test', 'linuxbridge', 'openvswitch',
 # 'hyperv', 'ncs', 'arista', 'cisco_nexus', 'mlnx', 'l2population',
 # 'sriovnicswitch', 'ovn']
-CONFIG_NEUTRON_ML2_MECHANISM_DRIVERS=ovn
+CONFIG_NEUTRON_ML2_MECHANISM_DRIVERS=openvswitch
 
 # Comma-separated list of physical_network names with which flat
 # networks can be created. Use * to allow flat networks with arbitrary
@@ -922,7 +922,7 @@ CONFIG_NEUTRON_OVN_BRIDGE_MAPPINGS=extnet:br-ex
 # issuing the following command: packstack --allinone --os-neutron-
 # ovn-bridge-mappings=ext-net:br-ex --os-neutron-ovn-bridge-interfaces
 # =br-ex:eth0
-CONFIG_NEUTRON_OVN_BRIDGE_IFACES=
+CONFIG_NEUTRON_OVN_BRIDGE_IFACES=br-ex:eth0
 
 # Comma-separated list of Open vSwitch bridges that must be created
 # and connected to interfaces in compute nodes when flat or vlan type
@@ -932,7 +932,7 @@ CONFIG_NEUTRON_OVN_BRIDGE_IFACES=
 # compute=br-vlan --os-neutron-ovn-bridge-mappings="extnet:br-
 # ex,physnet1:br-vlan" --os-neutron-ovn-bridge-interfaces="br-ex:eth1
 # ,br-vlan:eth2"
-CONFIG_NEUTRON_OVN_BRIDGES_COMPUTE=
+CONFIG_NEUTRON_OVN_BRIDGES_COMPUTE=br-ex:eth1
 
 # Name of physical network used for external network when enabling
 # CONFIG_PROVISION_DEMO. Name must be one of the included in
